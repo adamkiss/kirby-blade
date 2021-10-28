@@ -84,7 +84,7 @@ class Template extends KirbyTemplate
             $this->setDirectives();
             $this->setIfStatements();
 
-            return $this->blade->make($this->name, $data);
+            return $this->blade->make($this->name, $data)->render();
         } else {
             return Tpl::load($this->file(), $data);
         }
